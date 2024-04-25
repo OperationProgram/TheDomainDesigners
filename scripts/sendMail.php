@@ -4,20 +4,20 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+function sendMail($args) {
 
+    extract($args);
     // Email parameters
-    $to = 'FullResponseSites@gmail.com'; // Change this to your recipient email address
+    $to = 'metameg8@gmail.com'; 
     $subject = 'New Contact Form Submission';
 
     // Compose email message
     $body = "Name: $name\n";
     $body .= "Email: $email\n";
-    $body .= "Message:\n$message";
+    $body .= "Phone:\n$phone\n";
+    $body .= "Company:\n$company\n";
+    $body .= "Website:\n$website\n";
+    $body .= "Message:\n$message\n";
 
     // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'FullResponseSites@gmail.com'; // Replace with your Gmail email address
-        $mail->Password = 'yvgt lilo ldmw hebp'; // Replace with your Gmail password or app password
+        $mail->Username = 'metameg8@gmail.com'; // Replace with your Gmail email address
+        $mail->Password = 'sicj budg xvvt oyde'; // Replace with your Gmail password or app password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
@@ -42,8 +42,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Body = $body;
 
         // Send email
-        $mail->send();
-        echo "Thank you! Your message has been sent.";
+        if($mail->send()){
+            // echo "Thank you! Your message has been sent.";
+            return "success";
+        } else{
+            // echo "Oops! Something went wrong. Please try again later. Error: {$mail->ErrorInfo}";
+            return "Email not send. Please try again";
+        }
+    
+        // $mail->send();
+    //     echo "Thank you! Your message has been sent.";
     } catch (Exception $e) {
         echo "Oops! Something went wrong. Please try again later. Error: {$mail->ErrorInfo}";
     }

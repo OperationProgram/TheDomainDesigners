@@ -1,3 +1,21 @@
+<?php require("../scripts/sendMail.php"); ?>
+<?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['phone'])){
+         $response = "Email, Name, and Phone fields required";
+      } else{
+         $response = sendMail(['email' => $_POST['email'], 
+                              'name' => $_POST['name'],
+                              'phone' => $_POST['phone'],
+                              'company' => $_POST['company'],
+                              'website' => $_POST['website'],
+                              'message' =>  $_POST['message'],
+                            ]);
+      }
+      echo '<script>window.location = "#submit_btn";</script>';
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,27 +48,24 @@
         </div>
         <div class="right-column">
             <h2>Tell Us More</h2>
-            <form class="contact-form">
+            <form action="" method="post" class="contact-form" >
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <input type="text" id="name" name="name" placeholder="Your name" >
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" >
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <input type="email" id="email" name="email" placeholder="Your email address" >
                 </div>
                 <div class="form-group">
                     <label for="company">Company Name</label>
                     <input type="text" id="company" name="company" placeholder="Your company name">
                 </div>
-                <div class="form-group">
-                    <label for="website">Company Name</label>
-                    <input type="url" id="website" name="website" placeholder="Your company name">
-                </div>
+                
                 <div class="form-group">
                     <label for="website">Company Website</label>
                     <input type="url" id="website" name="website" placeholder="Your company website">
@@ -66,7 +81,19 @@
                     <label for="message">Your Concept</label>
                     <textarea id="message" name="message" placeholder="Whats your vision?"></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button id="submit_btn" type="submit">Submit</button>
+
+                <?php
+                    if(@$response == "success") {
+                ?>
+                    <p class="success">Email send successfully</p>
+                <?php
+                    } else {
+                ?>
+                    <p class="error"><?php echo @$response; ?></p>
+                <?php
+                    }  
+                ?>
             </form>
         </div>
     </div>
