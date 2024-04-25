@@ -1,11 +1,12 @@
 <?php require("../scripts/sendMail.php"); ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['phone'])){
+      if(empty($_POST['email']) || empty($_POST['fname']) ||  empty($_POST['lname']) || empty($_POST['phone'])){
          $response = "Email, Name, and Phone fields required";
       } else{
          $response = sendMail(['email' => $_POST['email'], 
-                              'name' => $_POST['name'],
+                              'fname' => $_POST['fname'],
+                              'lname' => $_POST['lname'],
                               'phone' => $_POST['phone'],
                               'company' => $_POST['company'],
                               'website' => $_POST['website'],
@@ -50,8 +51,12 @@
             <h2>Tell Us More</h2>
             <form action="" method="post" class="contact-form" >
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" >
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" >
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" >
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
@@ -70,6 +75,7 @@
                     <label for="website">Company Website</label>
                     <input type="url" id="website" name="website" placeholder="Your company website">
                 </div>
+
                 <!-- <div class="form-group checkboxes">
                     <label>Interests</label>
                     <div class="checkbox-grid">
@@ -77,16 +83,16 @@
                         <label for="checkbox1">Option 1</label>
                     </div>
                 </div> -->
-                <div class="form-group">
+                <div class="form-group full-row">
                     <label for="message">Your Concept</label>
                     <textarea id="message" name="message" placeholder="Whats your vision?"></textarea>
                 </div>
                 
-                <button id="submit_btn" type="submit">Submit</button>
+                <button id="submit_btn" class="full-row" type="submit">Submit</button>
                 <?php
                     if(@$response == "success") {
                 ?>
-                    <p class="success">Email send successfully</p>
+                    <p class="success">Email sent successfully</p>
                 <?php
                     } else {
                 ?>

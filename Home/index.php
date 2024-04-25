@@ -136,7 +136,7 @@
                         <?php
                             if(@$response == "success") {
                         ?>
-                            <p class="success">Email send successfully</p>
+                            <p class="success">Email sent successfully</p>
                         <?php
                             } else {
                         ?>

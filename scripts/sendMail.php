@@ -12,7 +12,8 @@ function sendMail($args) {
     $subject = 'New Contact Form Submission';
 
     // Compose email message
-    $body = "Name: $name\n";
+    $body = "First Name: $fname\n";
+    $body = "Last Name: $lname\n";
     $body .= "Email: $email\n";
     $body .= "Phone:\n$phone\n";
     $body .= "Company:\n$company\n";
@@ -33,7 +34,7 @@ function sendMail($args) {
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom($email, $name);
+        $mail->setFrom($email, $lname);
         $mail->addAddress($to);
 
         // Content
@@ -47,7 +48,7 @@ function sendMail($args) {
             return "success";
         } else{
             // echo "Oops! Something went wrong. Please try again later. Error: {$mail->ErrorInfo}";
-            return "Email not send. Please try again";
+            return "Email not sent. Please try again";
         }
     
         // $mail->send();

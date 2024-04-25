@@ -95,7 +95,7 @@
 /* Style for form elements */
 .contact-form {
     display: grid;
-    /* grid-template-columns: repeat(2, minmax(0, 1fr));  */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 20px;
     text-align: left;
     padding: 20px;
@@ -130,6 +130,9 @@
     font-size: 14px; /* Reduce input font size */
 }
 
+.full-row {
+    grid-column: span 2;
+}
 .checkbox-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
