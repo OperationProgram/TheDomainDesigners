@@ -95,7 +95,7 @@
 /* Style for form elements */
 .contact-form {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two-column layout */
+    /* grid-template-columns: repeat(2, minmax(0, 1fr));  */
     gap: 20px;
     text-align: left;
     padding: 20px;
