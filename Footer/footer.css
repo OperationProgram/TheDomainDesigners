@@ -1,0 +1,53 @@
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.site-footer h3 {
+    color: #fff;
+}
+
+.site-footer p,
+.site-footer ul {
+    color: #ccc;
+}
+
+.site-footer a {
+    color: #ccc;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
+.site-footer img {
+    max-width: 100%;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Background color of the social media icons */
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #333; /* Color of the social media icons */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #333; /* Change background color on hover */
+    color: #fff; /* Change icon color on hover */
+}

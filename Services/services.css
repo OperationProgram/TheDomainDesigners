@@ -1,0 +1,223 @@
+
+
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+.services {
+    background-color: rgb(39, 39, 39);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns, each with minimum width 200px */
+    grid-gap: 50px; /* Adjust the gap between cards */
+    justify-content: center; /* Center the card containers horizontally */
+    min-width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+
+}
+
+.service-title {
+    grid-column: 1 / -1; /* Span all columns */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add space below the title */
+}
+
+.service-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: rgb(252, 195, 90);
+}
+
+
+
+.service-card {
+
+    background-color: rgb(76, 76, 76);
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Add box shadow */
+    border-radius: 10px; /* Add border radius */
+    line-height: 1.2;
+    letter-spacing: 1.4px;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: scale(.9); /* Increase the size of the element by 1.5 times */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow */
+}
+
+.service-card img {
+    width: 100%; /* Occupy the full width of the container */
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and cover the specified height */
+    border-top-left-radius: 10px; /* Add border radius to top left */
+    border-top-right-radius: 10px; /* Add border radius to top right */
+}
+
+
+.service-content h2 {
+    color: wheat;
+}
+
+.service-content p {
+    color: white;
+}
+
+
+/* Adjust card width for smaller screens */
+
+@media screen and (max-width: 1045px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* Change to single column layout */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+        
+    }
+
+    .service-card {
+        
+    }
+}
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: repeat(1, 1fr); /* Change to single column layout */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    
+    }
+
+    .service-card {
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 50px;
+    }
+}
+
+
+
+    /* Web Design Section */
+.web-design-section {
+    background-color: rgb(39, 39, 39);
+    padding: 50px 0;
+}
+
+.web-design-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.web-design-content {
+    text-align: center;
+}
+
+.web-design-image img {
+    width: 100%; /* Occupy the full width of the container */
+    max-height: 200px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and cover the specified height */
+}
+
+.web-design-border {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid wheat;
+}
+
+.web-design-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: wheat;
+    text-align: center;
+}
+
+.web-design-content p {
+    line-height: 1.6;
+    color: #ffffff;
+    letter-spacing: 1.7px;
+    text-align: left;
+}
+
+/* SEO Section */
+.seo-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.seo-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.seo-content {
+    text-align: center;
+}
+
+.seo-image img {
+    width: 100%; /* Occupy the full width of the container */
+    max-height: 200px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and cover the specified height */
+}
+
+.seo-border {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #6a0dad;
+}
+
+.seo-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #6a0dad;
+    text-align: center;
+}
+
+.seo-content p {
+    line-height: 1.6;
+    color: #333;
+    letter-spacing: 1.7px;
+    text-align: left;
+}
+
+/* Graphic Design Section */
+.graphic-design-section {
+    background-color:#333;
+    padding: 50px 0;
+}
+
+.graphic-design-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.graphic-design-content {
+    text-align: center;
+}
+.graphic-design-image img {
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover;
+}
+
+.graphic-design-border {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid wheat;
+}
+
+.graphic-design-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: wheat;
+    text-align: center;
+}
+
+.graphic-design-content p {
+    line-height: 1.6;
+    color: #fff;
+    letter-spacing: 1.7px;
+    text-align: left;
+}

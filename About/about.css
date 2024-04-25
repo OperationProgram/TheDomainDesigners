@@ -1,0 +1,97 @@
+    
+    
+    @font-face {
+        font-family: 'LeagueSpartan';
+        src: url('fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+        /* Add additional font variations if needed */
+    }
+    
+    @font-face {
+        font-family: 'LibreBakersville';
+        src: url('fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+        /* Add additional font variations if needed */
+    }
+    
+    
+    .about-section {
+        padding: 50px 0;
+        background-color: #1f1f1f;
+    }
+
+    .about-content {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #898989;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Updated box shadow */
+    }
+
+    .text-content {
+        padding-right: 20px;
+    }
+
+    .text-content h2 {
+        margin-bottom: 10px;
+    }
+
+    .text-content p {
+        line-height: 1.4;
+        letter-spacing: 1.2px;
+    }
+
+    .about-content img {
+        max-width: 100%;
+        height: auto;
+        grid-column: 2;
+        grid-row: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Updated box shadow */
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            grid-template-columns: 1fr; /* Switch to single column */
+        }
+
+        .about-content img {
+            grid-column: 1; /* Reset grid-column to stack image above text */
+            grid-row: 1;    /* Reset grid-row to stack image above text */
+            width: 100%;
+            margin-bottom: 20px; 
+        }
+    }
+
+    .profiles-section {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f7f7f7;
+    }
+
+    .profile-card {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .profile-card img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-card h2 {
+        margin-top: 20px;
+    }
+
+    .profile-card p {
+        margin-top: 10px;
+    }

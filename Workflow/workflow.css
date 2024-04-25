@@ -1,0 +1,105 @@
+/* Styles for sections */
+
+/* #f0f0f0; #ffffff; */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    position: relative; /* Add relative positioning */
+}
+
+/* Styles for the border line */
+.section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Adjust the starting point */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 70%; /* Adjust the width of the line */
+    height: 2px;
+    background-color: #6A0DAD;
+}
+
+
+/* Alternate sections with image on left and text on right */
+.section:nth-child(even) .content {
+    order: 1;
+}
+
+
+/* Styles for content */
+.content {
+    background-color: rgb(39, 39, 39);
+    max-width: 1000px;
+    width: fit-content;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 10px; /* Adjust border radius as needed */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Adjust box shadow properties */
+}
+
+.content h2 {
+    letter-spacing: 1.3px;
+    color: wheat;
+    font-size: 48px;
+    border-radius: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* Add padding for left and right gutters */
+}
+
+.content p {
+    margin: 20px;
+    margin-bottom: 70px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    letter-spacing: 1.6px;
+    line-height: 2;
+    font-size: 24px;
+    color: white;
+    
+}
+
+/* Styles for images */
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.design {
+    /* background-color: #e6f7ff; */
+    /* background-color: lavender; */
+    background-color: black;
+}
+
+.development {
+    background-color: #ffe6f2;
+    /* background-color: cornsilk; */
+}
+
+.deliver {
+    background-color: #f2e6ff;
+    /* background-color: lavender; */
+}
+
+@media screen and (max-width: 1276px) {
+    .content h2 {
+        font-size: 40px;
+    }
+    .content p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content h2 {
+        font-size: 32px;
+    }
+    .content p {
+        font-size: 18px;
+    }
+}

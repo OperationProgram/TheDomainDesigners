@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #ffffff; /* White background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed; /* Fixed position for the navbar */
+    width: 100%; /* Take full width of the viewport */
+    top: 0; /* Position at the top of the viewport */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    transition: top 0.3s; /* Smooth transition for position change */
+    width: 100%;
+}
+
+
+.navbar-brand {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.navbar-brand img {
+    height: 40px; /* Adjust the height of the logo as needed */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-links li {
+    margin-right: 20px; /* Adjust the margin between links as needed */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000; /* Black color for links */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.btn-consultation {
+    background-color: #6A0DAD; /* Primary color for the button */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-consultation:hover {
+    background-color: #8C32B8; /* Darker color on hover */
+}
+
+body {
+    padding-top: 80px; /* Ensure space at the top for the fixed navbar */
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 20px; /* Adjust the spacing between logo and links */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px; /* Adjust the spacing between links on smaller screens */
+    }
+}
+

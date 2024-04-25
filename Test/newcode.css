@@ -1,0 +1,157 @@
+
+
+
+
+/* Company Section */
+.company-section {
+    background-color: #f9f9f9; /* Set background color */
+    padding: 50px 0; /* Add padding to create space around content */    
+}
+
+.company-container {
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 20px; /* Add padding to the sides */
+    width: 80%;
+}
+
+.company-content {
+    text-align: center; /* Center the content */
+
+}
+
+.company-border{
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #6A0DAD;
+
+}
+
+.company-content h2 {
+    font-size: 36px; /* Set the font size for the title */
+    margin-bottom: 20px; /* Add space below the title */
+    color: #6A0DAD; /* Set the text color */
+    text-align: center;
+}
+
+.company-content p {
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #333; /* Set the text color */
+    letter-spacing: 1.7px;
+    text-align: left;
+    
+}
+
+
+
+/* New CSS */
+
+.company-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.company-text {
+    flex: 2;
+}
+
+.company-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .company-content {
+        align-items: flex-start;
+    }
+    
+    .company-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    text-align: center;
+}
+.title-area {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+
+.text-box, .image-box {
+    flex: 1; /* Each item takes equal space */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.text-box {
+
+}
+
+
+
+.text-box p {
+    padding-top: 30%;
+    margin: 0;
+    line-height: 2;
+    letter-spacing: 1.4px;
+    height: auto;
+
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.profile-section {
+    text-align: center; /* Center the content */
+    margin-top: 50px; /* Add space between the company and profile sections */
+}
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
+    
+}
+
+.card {
+    text-align: center;
+    margin: 0 10px;
+    margin-bottom: 20px; /* Add space between cards */
+}
+
+.card img {
+    width: 100px; /* Adjust the size of the profile pictures */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+}

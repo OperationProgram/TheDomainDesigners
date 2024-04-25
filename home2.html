@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Left-Right Divs</title>
+    <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="nav-bar.css">
+</head>
+
+<header>
+    <script src="navigationLoader.js"></script>
+</header>
+<body>
+    
+    <div class="container">
+        <div class="left-column">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feedback, or inquiries, please don't hesitate to reach out to us. Our team is here to assist you with any concerns you may have. Whether you're looking for more information about our products or services, want to discuss a partnership opportunity, or simply want to say hello, we're always eager to hear from you. Feel free to use the contact form below to send us a message, and we'll get back to you as soon as possible. Thank you for considering us, and we look forward to connecting with you!</p>
+            <img src="assets/contact-image-transparent.png" alt="Image Description">
+        </div>
+        <div class="right-column">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your company name">
+                </div>
+                <div class="form-group">
+                    <label for="website">Company Website</label>
+                    <input type="url" id="website" name="website" placeholder="Your company website">
+                </div>
+                <div class="form-group checkboxes">
+                    <label>Interests</label>
+                    <div class="checkbox-grid">
+                        <input type="checkbox" id="checkbox1" name="interests" value="Option 1">
+                        <label for="checkbox1">Option 1</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
