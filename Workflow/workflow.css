@@ -38,7 +38,8 @@
     text-align: center;
     margin: 0 auto; /* Center the container horizontally */
     border-radius: 10px; /* Adjust border radius as needed */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Adjust box shadow properties */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); 
+    padding: 20px;
 }
 
 .content h2 {
@@ -72,8 +73,8 @@
 
 .design {
     /* background-color: #e6f7ff; */
-    /* background-color: lavender; */
-    background-color: black;
+    background-color: lavender;
+    /* background-color: black; */
 }
 
 .development {
@@ -101,5 +102,6 @@
     }
     .content p {
         font-size: 18px;
+        text-align: left;
     }
 }

@@ -7,22 +7,19 @@ a {
 }
 
 .services {
+    width: 100%;
     background-color: rgb(39, 39, 39);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns, each with minimum width 200px */
-    grid-gap: 50px; /* Adjust the gap between cards */
-    justify-content: center; /* Center the card containers horizontally */
-    min-width: 800px;
+    display: flex;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-gap: 50px;  */
+    justify-content: center;
+    /* min-width: 800px; */
     min-height: 600px;
     margin: 0 auto;
 
 }
 
-.service-title {
-    grid-column: 1 / -1; /* Span all columns */
-    text-align: center; /* Center the title */
-    margin-bottom: 20px; /* Add space below the title */
-}
 
 .service-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -33,7 +30,6 @@ a {
 
 
 .service-card {
-
     background-color: rgb(76, 76, 76);
     height: auto;
     margin: 10px;
@@ -42,7 +38,7 @@ a {
     border-radius: 10px; /* Add border radius */
     line-height: 1.2;
     letter-spacing: 1.4px;
-    text-align: center;
+    /* text-align: left; */
 }
 
 .service-card:hover {
@@ -61,10 +57,12 @@ a {
 
 .service-content h2 {
     color: wheat;
+    text-align: center;
 }
 
 .service-content p {
     color: white;
+    text-align: left;
 }
 
 
@@ -72,25 +70,29 @@ a {
 
 @media screen and (max-width: 1045px) {
     .services {
-        grid-template-columns: repeat(2, 1fr); /* Change to single column layout */
-        padding: 0 10px; /* Adjust padding for smaller screens */
+        /* grid-template-columns: repeat(2, 1fr);  */
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 10px; 
         
     }
 
     .service-card {
-        
+        width: 56%;
+        margin: 20px auto;
     }
 }
+
 @media screen and (max-width: 768px) {
     .services {
         grid-template-columns: repeat(1, 1fr); /* Change to single column layout */
         padding: 0 10px; /* Adjust padding for smaller screens */
-    
+        margin-top: 50px;
     }
 
     .service-card {
-        margin-left: 80px;
-        margin-right: 80px;
+        /* margin-left: 80px;
+        margin-right: 80px; */
         margin-bottom: 50px;
     }
 }

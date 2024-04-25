@@ -81,8 +81,8 @@
                     <label for="message">Your Concept</label>
                     <textarea id="message" name="message" placeholder="Whats your vision?"></textarea>
                 </div>
+                
                 <button id="submit_btn" type="submit">Submit</button>
-
                 <?php
                     if(@$response == "success") {
                 ?>
@@ -95,6 +95,7 @@
                     }  
                 ?>
             </form>
+            
         </div>
     </div>
 
