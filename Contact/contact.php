@@ -104,7 +104,7 @@
             <div id="spinner_overlay" class="spinner-overlay">
                 <div class="spinner"></div>
             </div>
-            <script src="../scripts/contactFormLoading.js"></script>
+            <script src="../scripts/contactForm.js"></script>
             
         </div>
     </div>

@@ -29,7 +29,6 @@ function sendMail($args) {
     }
     $body .= "Message:\n$message\n";
 
-    echo "hello";
     // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
 
