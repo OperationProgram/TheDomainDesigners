@@ -88,6 +88,7 @@
                     <textarea id="message" name="message" placeholder="Whats your vision?"></textarea>
                 </div>
                 
+                
                 <button id="submit_btn" class="full-row" type="submit">Submit</button>
                 <?php
                     if(@$response == "success") {

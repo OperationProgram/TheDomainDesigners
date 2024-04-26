@@ -1,7 +1,7 @@
 /* Styles for sections */
 :root {
     /* COLORS */
-    --primary-color: #8702e7;
+    --primary-color: #dbce26;
     /* var(--primary-color); */
     --accent-color: #D4A4FF;
     --secondary-color: #EDEDED;
@@ -9,8 +9,11 @@
     --dark-text-color: #000000;
     --light-text-color: #ffffff;
     --background-color: rgba(39, 39, 39);
-    --background-color-transparent: rgba(39, 39, 39, 0.7);
+
+    --background-color-transparent: rgba(39, 39, 39, 0.4);
     --button-background: wheat;
+
+
 
 
     /* FONT SIZES */
@@ -23,9 +26,7 @@
 
 }
 
-.body {
-    background-color: var(--dark-text-color);
-}
+
 
 /* #f0f0f0; #ffffff; */
 .section {
@@ -34,6 +35,8 @@
     align-items: center;
     padding: 50px 0;
     position: relative; /* Add relative positioning */
+    background-color: var(--background-color);
+
 }
 
 /* Styles for the border line */
@@ -57,7 +60,6 @@
 
 /* Styles for content */
 .content {
-    background-color: var(--background-color);
     max-width: 80%;
     margin-left: 20px;
     margin-right: 20px;
@@ -72,7 +74,7 @@
     margin: 20px;
     padding: 20px;
     letter-spacing: 1.3px;
-    color: wheat;
+    color: var(--primary-color);
     font-size: var(--xlarge-font-size);
     border-radius: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -118,6 +120,9 @@
     .content p {
         font-size: var(--medium-font-size)
     }
+    .content img {
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -126,5 +131,8 @@
     }
     .content p {
         font-size: var(--small-font-size)
+    }
+    .content img {
+        max-width: 80%;
     }
 }

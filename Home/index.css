@@ -24,6 +24,7 @@ Secondary Color: Light Gray #EDEDED */
     --text-color: #ffffff;
     --dark-text-color: #000000;
     --light-text-color: #ffffff;
+    --background-color: rgba(39, 39, 39);
     --background-color-transparent: rgba(39, 39, 39, 0.4);
     --button-background: wheat;
 }

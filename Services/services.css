@@ -1,5 +1,19 @@
 
+:root {
+    --primary-color: #dbce26;
+    --other-color: #7f03e4;
+    /* var(--primary-color); */
+    --accent-color: #D4A4FF;
+    --secondary-color: #EDEDED;
+    --text-color: #ffffff;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --background-color: rgba(39, 39, 39);
+    --background-color2: rgb(56, 56, 56);
 
+    --background-color-transparent: rgba(39, 39, 39, 0.4);
+    --button-background: wheat;
+}
 
 a {
     text-decoration: none; /* Remove underline */
@@ -8,7 +22,7 @@ a {
 
 .services {
     width: 100%;
-    background-color: rgb(39, 39, 39);
+    background-color: var(--background-color);
     display: flex;
     /* display: grid; */
     /* grid-template-columns: repeat(3, 1fr); */
@@ -24,17 +38,17 @@ a {
 .service-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 36px;
-    color: rgb(252, 195, 90);
+    color: var(--primary-color);
 }
 
 
 
 .service-card {
-    background-color: rgb(76, 76, 76);
+    background-color: var(--background-color);
     height: auto;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Add box shadow */
+    box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.901); /* Add box shadow */
     border-radius: 10px; /* Add border radius */
     line-height: 1.2;
     letter-spacing: 1.4px;
@@ -56,7 +70,7 @@ a {
 
 
 .service-content h2 {
-    color: wheat;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -100,8 +114,9 @@ a {
 
 
     /* Web Design Section */
+
 .web-design-section {
-    background-color: rgb(39, 39, 39);
+    background-color: var(--background-color);
     padding: 50px 0;
 }
 
@@ -119,31 +134,34 @@ a {
     width: 100%; /* Occupy the full width of the container */
     max-height: 200px; /* Set a maximum height for the images */
     object-fit: cover; /* Ensure images maintain their aspect ratio and cover the specified height */
+    margin-bottom: 50px;
+    border: 2px dotted var(--primary-color);
+
 }
 
 .web-design-border {
     margin: 10px;
     padding: 10px;
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .web-design-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: wheat;
+    color: var(--primary-color);
     text-align: center;
 }
 
 .web-design-content p {
     line-height: 1.6;
-    color: #ffffff;
+    color: #fff;
     letter-spacing: 1.7px;
     text-align: left;
 }
 
 /* SEO Section */
 .seo-section {
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     padding: 50px 0;
 }
 
@@ -161,31 +179,34 @@ a {
     width: 100%; /* Occupy the full width of the container */
     max-height: 200px; /* Set a maximum height for the images */
     object-fit: cover; /* Ensure images maintain their aspect ratio and cover the specified height */
+    margin-bottom: 50px;
+    border: 2px dotted var(--primary-color);
+
 }
 
 .seo-border {
     margin: 10px;
     padding: 10px;
-    border-bottom: 2px solid #6a0dad;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .seo-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #6a0dad;
+    color: var(--primary-color);
     text-align: center;
 }
 
 .seo-content p {
     line-height: 1.6;
-    color: #333;
+    color: #fff;
     letter-spacing: 1.7px;
     text-align: left;
 }
 
 /* Graphic Design Section */
 .graphic-design-section {
-    background-color:#333;
+    background-color: var(--background-color);
     padding: 50px 0;
 }
 
@@ -202,18 +223,20 @@ a {
     width: 100%; 
     max-height: 200px; 
     object-fit: cover;
+    margin-bottom: 50px;
+    border: 2px dotted var(--primary-color);
 }
 
 .graphic-design-border {
     margin: 10px;
     padding: 10px;
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .graphic-design-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: wheat;
+    color: var(--primary-color);
     text-align: center;
 }
 
