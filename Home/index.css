@@ -4,14 +4,14 @@ Accent Color: Lavender #D4A4FF
 Secondary Color: Light Gray #EDEDED */
 @font-face {
     font-family: 'LeagueSpartan';
-    src: url('fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype'),
-         url('fonts/League_Spartan/LeagueSpartan-Bold.ttf') format('truetype'); /* add other font variations as needed */
+    src: url('../Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype'),
+         url('../Fonts/League_Spartan/LeagueSpartan-Bold.ttf') format('truetype'); /* add other font variations as needed */
 }
 
 @font-face {
     font-family: 'LibreBakersville';
-    src: url('fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype'),
-         url('fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype'); /* add other font variations as needed */
+    src: url('../Fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype'),
+         url('../Fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype'); /* add other font variations as needed */
 }
 
 /* Resetting default margin and padding */

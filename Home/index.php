@@ -188,7 +188,5 @@
         <script src="../scripts/footerLoader.js"></script>
     </footer>
 
-    <script src="scrollController.js"></script>
-
 </body>
 </html>
