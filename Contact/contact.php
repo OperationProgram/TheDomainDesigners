@@ -51,19 +51,19 @@
             <h2>Tell Us More</h2>
             <form id="contact_form" action="" method="post" class="contact-form" >
                 <div class="form-group">
-                    <label for="fname">First Name</label>
+                    <label for="fname">First Name<span style="color: red"> *</span></label>
                     <input type="text" id="fname" name="fname" placeholder="First name" >
                 </div>
                 <div class="form-group">
-                    <label for="lname">Last Name</label>
+                    <label for="lname">Last Name<span style="color: red"> *</span></label>
                     <input type="text" id="lname" name="lname" placeholder="Last name" >
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Phone<span style="color: red"> *</span></label>
                     <input type="tel" id="phone" name="phone" placeholder="Your phone number" >
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email<span style="color: red"> *</span></label>
                     <input type="email" id="email" name="email" placeholder="Your email address" >
                 </div>
                 <div class="form-group">
