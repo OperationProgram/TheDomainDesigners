@@ -1,16 +1,38 @@
 <?php require("../scripts/sendMail.php"); ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if(empty($_POST['email']) || empty($_POST['lname']) || empty($_POST['message'])){
-         $response = "All fields are required";
-      } else{
-         $response = sendMail(['email' => $_POST['email'], 
-                              'lname' => $_POST['lname'],
-                              'message' =>  $_POST['message']
-                            ]);
-      }
-      echo '<script>window.location = "#contact_form";</script>';
-   }
+
+        $valid = false;
+        $email = $_POST['email'];
+        $lname = $_POST['lname'];
+        $message = $_POST['message'];
+
+        if(empty($email) || empty($lname) || empty($message)){
+            $response = "All fields are required";
+        } 
+        
+        else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            // Sanitize email address
+            $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+            $valid = true;
+        } 
+        else {
+            $response = "Invalid email";
+        }
+        
+        if ($valid) {
+            $sanitizedName = filter_var($lname, FILTER_SANITIZE_STRING);
+            $sanitizedMessage = filter_var($message, FILTER_SANITIZE_STRING);
+            
+            $response = sendMail(['email' => $sanitizedEmail, 
+                                'lname' => $_POST['lname'],
+                                'message' =>  $_POST['message']
+                                ]);
+        }
+ 
+    }
+        echo '<script>window.location = "#contact_form";</script>';
+   
 ?>
 
 <!DOCTYPE html>
