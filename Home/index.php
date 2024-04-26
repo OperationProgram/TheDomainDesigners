@@ -1,3 +1,18 @@
+<?php require("../scripts/sendMail.php"); ?>
+<?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if(empty($_POST['email']) || empty($_POST['lname']) || empty($_POST['message'])){
+         $response = "All fields are required";
+      } else{
+         $response = sendMail(['email' => $_POST['email'], 
+                              'lname' => $_POST['lname'],
+                              'message' =>  $_POST['message']
+                            ]);
+      }
+      echo '<script>window.location = "#contact_form";</script>';
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,23 +115,40 @@
             <div class="contact-section">
                 <div class="contact-container">
                     <h2>Contact Us</h2>
-                    <form id="contact-form">
+                    <form id="contact_form" action="" method="post">
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="lname">
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="message">Message:</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message"></textarea>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Submit">
                         </div>
+
+                        <?php
+                            if(@$response == "success") {
+                        ?>
+                            <p class="success">Email sent successfully</p>
+                        <?php
+                            } else {
+                        ?>
+                            <p class="error"><?php echo @$response; ?></p>
+                        <?php
+                            }  
+                        ?>
                     </form>
+                    <div id="spinner_overlay" class="spinner-overlay">
+                        <div class="spinner"></div>
+                    </div>
+                    <script src="../scripts/contactFormLoading.js"></script>
+                    
                 </div>
             </div>
         </section>
@@ -200,10 +232,8 @@
     </main>
 
     <footer class="footer">
+        <script src="../scripts/footerLoader.js"></script>
     </footer>
-    <script src="../scripts/footerLoader.js"></script>
-
-    <script src="scrollController.js"></script>
 
 </body>
 </html>
