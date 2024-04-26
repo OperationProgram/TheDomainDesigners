@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'FullResponseSites@gmail.com'; // Replace with your Gmail email address
-        $mail->Password = 'yvgt lilo ldmw hebp'; // Replace with your Gmail password or app password
+        $mail->Password = 'ezkh kyle cuwg yjdj'; // Replace with your Gmail password or app password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 

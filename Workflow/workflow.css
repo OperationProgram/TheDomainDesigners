@@ -1,4 +1,31 @@
 /* Styles for sections */
+:root {
+    /* COLORS */
+    --primary-color: #8702e7;
+    /* var(--primary-color); */
+    --accent-color: #D4A4FF;
+    --secondary-color: #EDEDED;
+    --text-color: #ffffff;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --background-color: rgba(39, 39, 39);
+    --background-color-transparent: rgba(39, 39, 39, 0.7);
+    --button-background: wheat;
+
+
+    /* FONT SIZES */
+    --base-font-size: 16px; /* default base font size */
+    --small-font-size: 1rem;
+    --medium-font-size: 1.5rem;
+    --large-font-size: 2rem;
+    --xlarge-font-size: 3.0rem;
+
+
+}
+
+.body {
+    background-color: var(--dark-text-color);
+}
 
 /* #f0f0f0; #ffffff; */
 .section {
@@ -18,7 +45,7 @@
     transform: translateX(-50%); /* Center the line horizontally */
     width: 70%; /* Adjust the width of the line */
     height: 2px;
-    background-color: #6A0DAD;
+    background-color: var(--primary-color);
 }
 
 
@@ -30,21 +57,23 @@
 
 /* Styles for content */
 .content {
-    background-color: rgb(39, 39, 39);
-    max-width: 1000px;
-    width: fit-content;
+    background-color: var(--background-color);
+    max-width: 80%;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
     margin: 0 auto; /* Center the container horizontally */
     border-radius: 10px; /* Adjust border radius as needed */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Adjust box shadow properties */
+    box-shadow: 0px 4px 10px var(--background-color);
+    /* Adjust box shadow properties */
 }
 
 .content h2 {
+    margin: 20px;
+    padding: 20px;
     letter-spacing: 1.3px;
     color: wheat;
-    font-size: 48px;
+    font-size: var(--xlarge-font-size);
     border-radius: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* Add padding for left and right gutters */
@@ -58,12 +87,11 @@
     padding-right: 50px;
     letter-spacing: 1.6px;
     line-height: 2;
-    font-size: 24px;
+    font-size: var(--medium-font-size);
     color: white;
     
 }
 
-/* Styles for images */
 .content img {
     max-width: 100%;
     height: auto;
@@ -71,35 +99,32 @@
 }
 
 .design {
-    /* background-color: #e6f7ff; */
-    /* background-color: lavender; */
-    background-color: black;
+    background-color: var(--dark-text-color);
+    margin-top: 100px;
 }
 
 .development {
-    background-color: #ffe6f2;
-    /* background-color: cornsilk; */
+    background-color: var(--dark-text-color);
 }
 
 .deliver {
-    background-color: #f2e6ff;
-    /* background-color: lavender; */
+    background-color: var(--dark-text-color);
 }
 
 @media screen and (max-width: 1276px) {
     .content h2 {
-        font-size: 40px;
+        font-size: var(--large-font-size)
     }
     .content p {
-        font-size: 20px;
+        font-size: var(--medium-font-size)
     }
 }
 
 @media screen and (max-width: 768px) {
     .content h2 {
-        font-size: 32px;
+        font-size: var(--medium-font-size)
     }
     .content p {
-        font-size: 18px;
+        font-size: var(--small-font-size)
     }
 }

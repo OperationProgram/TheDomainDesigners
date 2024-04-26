@@ -16,7 +16,7 @@
 
     <main class="main">
         <video autoplay loop muted playsinline class="video">
-            <source src="../assets/video.mp4" type="video/mp4">
+            <source src="../assets/newvid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <section class="section section__hero" id="section-hero">
@@ -98,9 +98,9 @@
 
         <section>
             <div class="contact-section">
-                <div class="container">
+                <div class="contact-container">
                     <h2>Contact Us</h2>
-                    <form action="../Home/contact-form.php" method="post">
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
@@ -120,6 +120,53 @@
                 </div>
             </div>
         </section>
+
+    <section>
+        <div class="banner-live-counter">
+            <div class="banner-counter-wrapper">
+                <div class="banner-counter-item">
+                    <h3>Hours Invested</h3>
+                    <p class="banner-counter" data-target="1000">0</p>
+                </div>
+                
+                <div class="banner-counter-item">
+                    <h3>Web Projects</h3>
+                    <p class="banner-counter" data-target="50">0</p>
+                </div>
+                <div class="banner-counter-item">
+                    <h3># Visited</h3>
+                    <p class="banner-counter" data-target="10000">0</p>
+                </div>
+            </div>
+        </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const counters = document.querySelectorAll('.banner-counter');
+                    const speed = 200; // The lower the slower
+
+                    counters.forEach(counter => {
+                        const updateCount = () => {
+                            const target = +counter.getAttribute('data-target');
+                            const count = +counter.innerText;
+
+                            const inc = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + inc);
+                                setTimeout(updateCount, 1);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+
+                        updateCount();
+                    });
+                });
+            </script>
+        </section>
+
+
 
         <section class="section section__testimonials" id="section-testimonials">
             <div class="custom-shape-divider-bottom-123456789">

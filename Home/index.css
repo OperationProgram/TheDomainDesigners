@@ -15,6 +15,19 @@ Secondary Color: Light Gray #EDEDED */
 }
 
 /* Resetting default margin and padding */
+
+:root {
+    --primary-color: #dbce26;
+    /* var(--primary-color); */
+    --accent-color: #D4A4FF;
+    --secondary-color: #EDEDED;
+    --text-color: #ffffff;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --background-color-transparent: rgba(39, 39, 39, 0.4);
+    --button-background: wheat;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -52,13 +65,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 150px; /* Adjust as needed */
 
 }
 
 /* Style for section 1 */
 .section__hero {
     position: relative;
+    height: 600px; /* Set height to a fixed value like 600 pixels */
+
     
 }
 
@@ -68,7 +82,7 @@ p {
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
     z-index: 1;
-    width: 100%;
+    width: auto;
     margin-top: 150px;
     font-size: 32px;
         
@@ -86,7 +100,7 @@ p {
 
 
 .hero-content span {
-    color: wheat;
+    color: var(--primary-color);
     text-shadow: 
     -1px -1px 0 #000,  
     1px -1px 0 #000,
@@ -130,7 +144,7 @@ p {
 
 /* Primary call-to-action button styling */
 .cta-button--primary {
-    background-color: wheat;
+    background-color: var(--primary-color);
 
     color: #fff; /* White text color */
 }
@@ -225,7 +239,8 @@ p {
 
 /* Company Section */
 .company-section {
-    background-color: rgb(39, 39, 39);
+    background-color: var(--background-color-transparent);
+    ;
     padding: 50px 0; /* Add padding to create space around content */    
 }
 
@@ -243,14 +258,14 @@ p {
 .company-border{
     margin: 10px;
     padding: 10px;
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid var(--primary-color);
 
 }
 
 .company-content h2 {
-    font-size: 36px; /* Set the font size for the title */
-    margin-bottom: 20px; /* Add space below the title */
-    color: wheat; /* Set the text color */
+    font-size: 36px; 
+    margin-bottom: 20px;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -303,7 +318,7 @@ p {
 
 /* Styles for the Our Team section */
 .team-section {
-    background-color: rgb(39, 39, 39);
+    background-color: var(--background-color-transparent);
     padding: 50px 0; /* Add padding to create space around content */
 }
 
@@ -329,7 +344,7 @@ p {
 .team-border{
     margin: 10px;
     padding: 10px;
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid var(--primary-color);
 
 }
 
@@ -353,8 +368,7 @@ p {
 .team-text h2{
     margin-bottom: 30px;
     font-size: 2rem;
-    color: wheat; 
-
+    color: var(--primary-color);
 }
 
 
@@ -412,7 +426,7 @@ p {
 
 .clickable-section h2 {
     font-size: 48px;
-    color: wheat;
+    color: rgb(255, 255, 255);
     letter-spacing: 7px;
 }
 
@@ -443,7 +457,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%; /* Cover the full width of the container */
+    width: 100%; /* Cover the full width of the container */
     height: 100%; /* Cover the full height of the container */
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
     display: flex;
@@ -596,29 +610,32 @@ p {
     text-align: center;
     margin: 10px;
     padding: 10px;
-    color: wheat;
+    color: #fff;
     font-size: 36px;
+    width: 100%;
 }
 
 /* Testimonial Title Before and After Pseudo-elements */
 .testimonial-title::before,
 .testimonial-title::after {
-    content: "";
+    content: " ";
     position: absolute;
     top: 50%;
     height: 4px;
-    background-color: wheat;
+    background-color: #fff;
+    width: 100%;
 }
 
 .testimonial-title::before {
-    left: 20%;
+    left: 10%;
     transform: translateY(-50%);
-    width: 16%;}
+    max-width: 20%;
+}
 
 .testimonial-title::after {
-    right: 20%;
+    right: 10%;
     transform: translateY(-50%);
-    width: 16%;
+    width: 20%;
 }
 
 /* Testimonial Slider */
@@ -643,6 +660,7 @@ p {
                 0px 8px 16px rgba(0, 0, 0, 0.05);
     border-radius: 2%;
     height: auto;
+    
 }
 
 
@@ -693,7 +711,7 @@ p {
 
     
     .testimonial-title {
-        font-size: 24px; 
+        font-size: 16px; 
     }
     
     .testimonial p {
@@ -719,6 +737,11 @@ p {
     .testimonial-container {
         padding: 5px; 
     }
+
+    .testimonial-title::before,
+    .testimonial-title::after {
+        height: 2px;
+    }   
 }
 
 
@@ -741,14 +764,15 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     padding: 50px 0;
-    
+    z-index: 1;
+    background-color: var(--background-color-transparent);
 }
 
-.container {
+.contact-container {
     max-width: 400px;
     min-width: 200px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 20px;  
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
@@ -792,6 +816,58 @@ p {
     cursor: pointer;
 }
 
+
+
+
+
+.banner-section {
+    width: 100%;
+    background-color: #333;
+}
+
+.banner-live-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 20vh;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.banner-counter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-counter-item {
+    text-align: center;
+    position: relative;
+}
+
+.banner-counter {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    animation: banner-count-up 2s ease-in-out;
+}
+
+@keyframes banner-count-up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
 /* 
 .section__contact {
     background-color: #f8f8f8;
@@ -799,73 +875,3 @@ p {
     padding-top: 20px; 
     background-color: #6a0dad;
 }
-
-.contact-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: calc(100vh - 100px); 
-}
-
-.contact-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    gap: 20px;
-    text-align: left;
-    padding: 20px;
-    margin: 10px;
-    background-color: #D4A4FF;
-    border-radius: 8px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px; 
-}
-
-.form-group input[type="text"],
-.form-group input[type="tel"],
-.form-group input[type="email"],
-.form-group input[type="url"],
-.form-group textarea {
-    width: 100%;
-    padding: 8px; 
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 14px; 
-}
-
-.checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.checkbox-grid label::before {
-    width: 15px; 
-    height: 15px;
-}
-
-.form-group textarea {
-    height: 100px; 
-}
-
-button[type="submit"] {
-    background-color: #6a0dad;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px; 
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #4d0575;
-} */
