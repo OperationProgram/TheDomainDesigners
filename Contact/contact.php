@@ -49,7 +49,7 @@
         </div>
         <div class="right-column">
             <h2>Tell Us More</h2>
-            <form action="" method="post" class="contact-form" >
+            <form id="contact_form" action="" method="post" class="contact-form" >
                 <div class="form-group">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="fname" placeholder="First name" >
@@ -101,6 +101,10 @@
                     }  
                 ?>
             </form>
+            <div id="spinner_overlay" class="spinner-overlay">
+                <div class="spinner"></div>
+            </div>
+            <script src="../scripts/contactFormLoading.js"></script>
             
         </div>
     </div>

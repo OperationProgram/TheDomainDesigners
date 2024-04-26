@@ -1,16 +1,15 @@
 <?php require("../scripts/sendMail.php"); ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//    if(isset($_POST['submit'])){
-      if(empty($_POST['email']) || empty($_POST['name']) || empty($_POST['message'])){
+      if(empty($_POST['email']) || empty($_POST['lname']) || empty($_POST['message'])){
          $response = "All fields are required";
       } else{
          $response = sendMail(['email' => $_POST['email'], 
-                              'name' => $_POST['name'],
+                              'lname' => $_POST['lname'],
                               'message' =>  $_POST['message']
                             ]);
       }
-      echo '<script>window.location = "#submit_btn";</script>';
+      echo '<script>window.location = "#contact_form";</script>';
    }
 ?>
 
@@ -116,10 +115,10 @@
             <div class="contact-section">
                 <div class="container">
                     <h2>Contact Us</h2>
-                    <form id="submit_btn" action="" method="post">
+                    <form id="contact_form" action="" method="post">
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="lname">
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
@@ -145,6 +144,11 @@
                             }  
                         ?>
                     </form>
+                    <div id="spinner_overlay" class="spinner-overlay">
+                        <div class="spinner"></div>
+                    </div>
+                    <script src="../scripts/contactFormLoading.js"></script>
+                    
                 </div>
             </div>
         </section>

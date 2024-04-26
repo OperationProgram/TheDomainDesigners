@@ -12,12 +12,21 @@ function sendMail($args) {
     $subject = 'New Contact Form Submission';
 
     // Compose email message
-    $body = "First Name: $fname\n";
-    $body = "Last Name: $lname\n";
-    $body .= "Email: $email\n";
-    $body .= "Phone:\n$phone\n";
-    $body .= "Company:\n$company\n";
-    $body .= "Website:\n$website\n";
+   
+    if (isset($fname)) {
+        $body = "First Name: $fname\n";
+    }
+    $body = "Last Name: \n$lname\n";
+    $body .= "Email: \n$email\n";
+    if (isset($phone)) {
+        $body .= "Phone:\n$phone\n";
+    }
+    if (isset($company)) {
+        $body .= "Company:\n$company\n";
+    }
+    if (isset($website)) {
+        $body .= "Website:\n$website\n";
+    }
     $body .= "Message:\n$message\n";
 
     // Create a new PHPMailer instance
@@ -51,8 +60,6 @@ function sendMail($args) {
             return "Email not sent. Please try again";
         }
     
-        // $mail->send();
-    //     echo "Thank you! Your message has been sent.";
     } catch (Exception $e) {
         echo "Oops! Something went wrong. Please try again later. Error: {$mail->ErrorInfo}";
     }
