@@ -1,3 +1,22 @@
+<?php require("../scripts/sendMail.php"); ?>
+<?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if(empty($_POST['email']) || empty($_POST['fname']) ||  empty($_POST['lname']) || empty($_POST['phone'])){
+         $response = "Email, Name, and Phone fields required";
+      } else{
+         $response = sendMail(['email' => $_POST['email'], 
+                              'fname' => $_POST['fname'],
+                              'lname' => $_POST['lname'],
+                              'phone' => $_POST['phone'],
+                              'company' => $_POST['company'],
+                              'website' => $_POST['website'],
+                              'message' =>  $_POST['message'],
+                            ]);
+      }
+      echo '<script>window.location = "#submit_btn";</script>';
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,31 +49,33 @@
         </div>
         <div class="right-column">
             <h2>Tell Us More</h2>
-            <form class="contact-form">
+            <form id="contact_form" action="" method="post" class="contact-form" >
                 <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <label for="fname">First Name<span style="color: red"> *</span></label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" >
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    <label for="lname">Last Name<span style="color: red"> *</span></label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" >
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    <label for="phone">Phone<span style="color: red"> *</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email<span style="color: red"> *</span></label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" >
                 </div>
                 <div class="form-group">
                     <label for="company">Company Name</label>
                     <input type="text" id="company" name="company" placeholder="Your company name">
                 </div>
-                <div class="form-group">
-                    <label for="website">Company Name</label>
-                    <input type="url" id="website" name="website" placeholder="Your company name">
-                </div>
+                
                 <div class="form-group">
                     <label for="website">Company Website</label>
                     <input type="url" id="website" name="website" placeholder="Your company website">
                 </div>
+
                 <!-- <div class="form-group checkboxes">
                     <label>Interests</label>
                     <div class="checkbox-grid">
@@ -62,12 +83,29 @@
                         <label for="checkbox1">Option 1</label>
                     </div>
                 </div> -->
-                <div class="form-group">
+                <div class="form-group full-row">
                     <label for="message">Your Concept</label>
                     <textarea id="message" name="message" placeholder="Whats your vision?"></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                
+                <button id="submit_btn" class="full-row" type="submit">Submit</button>
+                <?php
+                    if(@$response == "success") {
+                ?>
+                    <p class="success">Email sent successfully</p>
+                <?php
+                    } else {
+                ?>
+                    <p class="error"><?php echo @$response; ?></p>
+                <?php
+                    }  
+                ?>
             </form>
+            <div id="spinner_overlay" class="spinner-overlay">
+                <div class="spinner"></div>
+            </div>
+            <script src="../scripts/contactFormLoading.js"></script>
+            
         </div>
     </div>
 
