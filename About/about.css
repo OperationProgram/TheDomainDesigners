@@ -1,21 +1,8 @@
-    
-    
-    @font-face {
-        font-family: 'LeagueSpartan';
-        src: url('fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
-        /* Add additional font variations if needed */
-    }
-    
-    @font-face {
-        font-family: 'LibreBakersville';
-        src: url('fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
-        /* Add additional font variations if needed */
-    }
-    
-    
+     
     .about-section {
         padding: 50px 0;
         background-color: #1f1f1f;
+        margin-top: 94px;
     }
 
     .about-content {

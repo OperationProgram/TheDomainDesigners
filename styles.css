@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('../Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype'),
+         url('../Fonts/League_Spartan/LeagueSpartan-Bold.ttf') format('truetype'); /* add other font variations as needed */
+}
+
+@font-face {
+    font-family: 'LibreBakersville';
+    src: url('../Fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype'),
+         url('../Fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype'); /* add other font variations as needed */
+}
+
+:root {
+    --primary-color: #dbce26;
+    --accent-color: #D4A4FF;
+    --secondary-color: #EDEDED;
+    --text-color: #ffffff;
+    --dark-text-color: #000000;
+    --light-text-color: #ffffff;
+    --background-color-transparent: rgba(39, 39, 39, 0.4);
+    --button-background: wheat;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'LibreBakersville', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'LeagueSpartan', sans-serif;
+    font-weight: bold; /* This will use the bold variation of LeagueSpartan */
+}

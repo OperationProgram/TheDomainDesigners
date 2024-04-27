@@ -30,8 +30,8 @@
                                 ]);
         }
  
-    }
         echo '<script>window.location = "#contact_form";</script>';
+    }
    
 ?>
 
@@ -42,6 +42,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Site</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../Navigation/nav-bar.css">
     <link rel="stylesheet" href="../Footer/footer.css">
 </head>
