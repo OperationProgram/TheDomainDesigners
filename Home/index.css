@@ -749,7 +749,7 @@ p {
 
 .contact-section {
     background-image: url('../assets/contact-form-transparent.png'); /* Replace 'background_image.jpg' with the path to your image */
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     padding: 50px 0;
