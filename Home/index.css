@@ -732,6 +732,14 @@ p {
     color: green;
  }
 
+ #form_error, .success_icon, .error_msg {
+    margin: 0.5rem;
+    display: none;
+}
+
+.error_msg {
+    color: #ff3c3c;
+}
 
 
 

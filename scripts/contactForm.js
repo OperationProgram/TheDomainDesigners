@@ -66,9 +66,3 @@ form.addEventListener('submit', function(event) {
     // form.submit();
    
 });
-
-
-// Loading Spinner
-document.getElementById('contact_form').addEventListener('submit', function(event) {
-    
-});

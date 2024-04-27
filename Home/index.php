@@ -142,18 +142,26 @@
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="lname">
+                            <img id="name_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="name_error" class="error_msg">Field is Required</span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email">
+                            <img id="email_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="email_error" class="error_msg">e.g.   (<i>email@example.com</i>)</span>
                         </div>
                         <div class="form-group">
                             <label for="message">Message:</label>
                             <textarea id="message" name="message"></textarea>
+                            <img id="message_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="message_error" class="error_msg">Field is Required</span>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Submit">
                         </div>
+                        <span id="form_error" class="error">There was a problem submitting the form. <br />
+                                                Check the fields for errors.</span>
 
                         <?php
                             if(@$response == "success") {
@@ -170,7 +178,7 @@
                     <div id="spinner_overlay" class="spinner-overlay">
                         <div class="spinner"></div>
                     </div>
-                    <script src="../scripts/contactForm.js"></script>
+                    <script type="module" src="../scripts/homeContactForm.js"></script>
                     
                 </div>
             </div>
