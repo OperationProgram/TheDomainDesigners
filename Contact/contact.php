@@ -53,18 +53,26 @@
                 <div class="form-group">
                     <label for="fname">First Name<span style="color: red"> *</span></label>
                     <input type="text" id="fname" name="fname" placeholder="First name" >
+                    <img id="fname_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                    <span id="fname_error" class="error_msg">Field is Required</span>
                 </div>
                 <div class="form-group">
                     <label for="lname">Last Name<span style="color: red"> *</span></label>
                     <input type="text" id="lname" name="lname" placeholder="Last name" >
+                    <img id="lname_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                    <span id="lname_error" class="error_msg">Field is Required</span>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone<span style="color: red"> *</span></label>
                     <input type="tel" id="phone" name="phone" placeholder="Your phone number" >
+                    <img id="phone_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                    <span id="phone_error" class="error_msg">Must be exactly 10 digits</span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email<span style="color: red"> *</span></label>
                     <input type="email" id="email" name="email" placeholder="Your email address" >
+                    <img id="email_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                    <span id="email_error" class="error_msg">e.g.   (<i>email@example.com</i>)</span>
                 </div>
                 <div class="form-group">
                     <label for="company">Company Name</label>
@@ -73,7 +81,9 @@
                 
                 <div class="form-group">
                     <label for="website">Company Website</label>
-                    <input type="url" id="website" name="website" placeholder="Your company website">
+                    <input type="text" id="website" name="website" placeholder="Your company website">
+                    <img id="website_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                    <span id="website_error" class="error_msg">e.g.   (<i>www.example.com</i>)</span>
                 </div>
 
                 <!-- <div class="form-group checkboxes">
@@ -89,6 +99,8 @@
                 </div>
                 
                 <button id="submit_btn" class="full-row" type="submit">Submit</button>
+                <span id="form_error" class="error">There was a problem submitting the form. <br />
+                                                Check the fields for errors.</span>
                 <?php
                     if(@$response == "success") {
                 ?>
@@ -104,7 +116,7 @@
             <div id="spinner_overlay" class="spinner-overlay">
                 <div class="spinner"></div>
             </div>
-            <script src="../scripts/contactForm.js"></script>
+            <script type="module" src="../scripts/contactForm.js"></script>
             
         </div>
     </div>

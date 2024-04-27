@@ -172,6 +172,10 @@ button[type="submit"]:hover {
         grid-template-columns: 1fr; /* Single column layout */
     }
 
+    .full-row {
+        grid-column: span 1;
+    }
+
     .form-group input[type="text"],
     .form-group input[type="tel"],
     .form-group input[type="email"],
@@ -226,17 +230,25 @@ button[type="submit"]:hover {
     display: none;
 }
 
-
 .error{
     margin-top: 30px;
-    color: #ffffff;
- }
-  
- .success{
+    color: #ff3c3c;
+}
+
+
+.success{
     margin-top: 30px;
     color: green;
- }
+}
 
+#form_error, .success_icon, .error_msg {
+    margin: 0.5rem;
+    display: none;
+}
+
+.error_msg {
+    color: #ff3c3c;
+}
  .spinner-overlay {
     position: fixed;
     top: 0;
