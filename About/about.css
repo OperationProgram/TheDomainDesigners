@@ -1,9 +1,9 @@
-     
-    .about-section {
-        padding: 50px 0;
-        background-color: #1f1f1f;
-        margin-top: 94px;
-    }
+    
+.about-section {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+    margin-top: 94px;
+}
 
 .about-content {
     display: grid;
@@ -21,8 +21,7 @@
 
 .text-content {
     padding-right: 20px;
-;
-   
+
 }
 
 .text-content h2 {
@@ -63,7 +62,7 @@
         object-fit: cover;
         height: 400px;
     }
-    }
+    
 
     .text-content h2 {
         font-size: var(--medium-font-size);

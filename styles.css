@@ -11,14 +11,23 @@
 }
 
 :root {
+    /* FONT COLORS */
     --primary-color: #dbce26;
     --accent-color: #D4A4FF;
     --secondary-color: #EDEDED;
     --text-color: #ffffff;
     --dark-text-color: #000000;
     --light-text-color: #ffffff;
+    --background-color: rgba(39, 39, 39);
     --background-color-transparent: rgba(39, 39, 39, 0.4);
     --button-background: wheat;
+
+    /* FONT SIZES */
+    --base-font-size: 16px; 
+    --small-font-size: 1rem;
+    --medium-font-size: 1.5rem;
+    --large-font-size: 2rem;
+    --xlarge-font-size: 3.0rem;
 }
 
 * {
@@ -33,5 +42,5 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'LeagueSpartan', sans-serif;
-    font-weight: bold; /* This will use the bold variation of LeagueSpartan */
+    font-weight: bold; 
 }

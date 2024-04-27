@@ -20,13 +20,7 @@ p {
 }
 
 /* Basic styling for sections */
-.section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 
 /* Style for section 1 */
 .section__hero {
@@ -41,11 +35,11 @@ p {
     flex-direction: column;
     justify-content: center; /* Vertically center content */
     align-items: center; /* Horizontally center content */
-    z-index: 1;
-    width: auto;
-    margin-top: 150px;
+    z-index: 2;
+    width: 100%; /* Occupy full width of the screen */
+    height: 600px; /* Occupy full height of the screen */
     font-size: 32px;
-        
+    position: relative;
 }
 
 @keyframes pop {
@@ -755,7 +749,7 @@ p {
 
 .contact-section {
     background-image: url('../assets/contact-form-transparent.png'); /* Replace 'background_image.jpg' with the path to your image */
-    background-size: 1000px, 600px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 50px 0;

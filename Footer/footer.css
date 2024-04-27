@@ -13,7 +13,14 @@
 
 .site-footer .container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.site-footer .row > div {
+    flex: 1; 
+    margin: 40px;
 }
 
 .site-footer .footer-section {
@@ -42,7 +49,7 @@
 }
 
 .site-footer img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .social-icons {
@@ -71,4 +78,11 @@
 .social-icons a:hover {
     background-color: #333;
     color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .site-footer .container > div {
+        margin: 15px 0; /* Adjust margin for smaller screens */
+    }
 }

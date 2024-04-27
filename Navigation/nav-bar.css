@@ -6,7 +6,7 @@
     padding: 20px;
     position: fixed; 
     width: 100%; 
-    height: 132px;
+    min-height: auto;
     top: 0; 
     z-index: 1000; 
     transition: top 0.3s; 
@@ -34,7 +34,7 @@
 .nav-links a {
     text-decoration: none;
     color: #000000; /* Black color for links */
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: var(--base-font-size);   
 }
 
 .btn-consultation {
