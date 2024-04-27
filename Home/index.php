@@ -1,16 +1,38 @@
 <?php require("../scripts/sendMail.php"); ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if(empty($_POST['email']) || empty($_POST['lname']) || empty($_POST['message'])){
-         $response = "All fields are required";
-      } else{
-         $response = sendMail(['email' => $_POST['email'], 
-                              'lname' => $_POST['lname'],
-                              'message' =>  $_POST['message']
-                            ]);
-      }
-      echo '<script>window.location = "#contact_form";</script>';
-   }
+
+        $valid = false;
+        $email = $_POST['email'];
+        $lname = $_POST['lname'];
+        $message = $_POST['message'];
+
+        if(empty($email) || empty($lname) || empty($message)){
+            $response = "All fields are required";
+        } 
+        
+        else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            // Sanitize email address
+            $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+            $valid = true;
+        } 
+        else {
+            $response = "Invalid email";
+        }
+        
+        if ($valid) {
+            $sanitizedName = filter_var($lname, FILTER_SANITIZE_STRING);
+            $sanitizedMessage = filter_var($message, FILTER_SANITIZE_STRING);
+            
+            $response = sendMail(['email' => $sanitizedEmail, 
+                                'lname' => $_POST['lname'],
+                                'message' =>  $_POST['message']
+                                ]);
+        }
+ 
+        echo '<script>window.location = "#contact_form";</script>';
+    }
+   
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +42,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Site</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../Navigation/nav-bar.css">
     <link rel="stylesheet" href="../Footer/footer.css">
 </head>
@@ -119,18 +142,26 @@
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="lname">
+                            <img id="name_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="name_error" class="error_msg">Field is Required</span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email">
+                            <img id="email_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="email_error" class="error_msg">e.g.   (<i>email@example.com</i>)</span>
                         </div>
                         <div class="form-group">
                             <label for="message">Message:</label>
                             <textarea id="message" name="message"></textarea>
+                            <img id="message_success" class="success_icon" src="../assets/green_check.svg" width="20" height="20">
+                            <span id="message_error" class="error_msg">Field is Required</span>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Submit">
                         </div>
+                        <span id="form_error" class="error">There was a problem submitting the form. <br />
+                                                Check the fields for errors.</span>
 
                         <?php
                             if(@$response == "success") {
@@ -147,7 +178,7 @@
                     <div id="spinner_overlay" class="spinner-overlay">
                         <div class="spinner"></div>
                     </div>
-                    <script src="../scripts/contactFormLoading.js"></script>
+                    <script type="module" src="../scripts/homeContactForm.js"></script>
                     
                 </div>
             </div>

@@ -2,42 +2,6 @@
 
 Accent Color: Lavender #D4A4FF
 Secondary Color: Light Gray #EDEDED */
-@font-face {
-    font-family: 'LeagueSpartan';
-    src: url('../Fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype'),
-         url('../Fonts/League_Spartan/LeagueSpartan-Bold.ttf') format('truetype'); /* add other font variations as needed */
-}
-
-@font-face {
-    font-family: 'LibreBakersville';
-    src: url('../Fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype'),
-         url('../Fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype'); /* add other font variations as needed */
-}
-
-/* Resetting default margin and padding */
-
-:root {
-    --primary-color: #dbce26;
-    /* var(--primary-color); */
-    --accent-color: #D4A4FF;
-    --secondary-color: #EDEDED;
-    --text-color: #ffffff;
-    --dark-text-color: #000000;
-    --light-text-color: #ffffff;
-    --background-color: rgba(39, 39, 39);
-    --background-color-transparent: rgba(39, 39, 39, 0.4);
-    --button-background: wheat;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'LibreBakersville', sans-serif; /* Use LeagueSpartan as the primary font family for the body */
-}
 
 
 .video {
@@ -50,13 +14,8 @@ body {
     z-index: -1;
 }
 
-h1, h2, h3 {
-    font-family: 'LeagueSpartan', sans-serif;
-    font-weight: bold; /* This will use the bold variation of LeagueSpartan */
-}
-
 p {
-    font-family: 'LibreBakersville', serif;
+    /* font-family: 'LibreBakersville', serif; */
     font-weight: 400; /* This will use the regular (400) variation of LibreBakersville */
 }
 
@@ -350,11 +309,6 @@ p {
     margin: 0 auto; /* Center the content horizontally */
     padding: 0 20px; /* Add padding to the sides */
     width: 80%;
-}
-
-
-
-.team-content {    
 }
 
 .team-content h2 {
@@ -778,6 +732,14 @@ p {
     color: green;
  }
 
+ #form_error, .success_icon, .error_msg {
+    margin: 0.5rem;
+    display: none;
+}
+
+.error_msg {
+    color: #ff3c3c;
+}
 
 
 

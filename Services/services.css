@@ -1,20 +1,3 @@
-
-:root {
-    --primary-color: #dbce26;
-    --other-color: #7f03e4;
-    /* var(--primary-color); */
-    --accent-color: #D4A4FF;
-    --secondary-color: #EDEDED;
-    --text-color: #ffffff;
-    --dark-text-color: #000000;
-    --light-text-color: #ffffff;
-    --background-color: rgba(39, 39, 39);
-    --background-color2: rgb(56, 56, 56);
-
-    --background-color-transparent: rgba(39, 39, 39, 0.4);
-    --button-background: wheat;
-}
-
 a {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color */
@@ -28,9 +11,10 @@ a {
     /* grid-template-columns: repeat(3, 1fr); */
     /* grid-gap: 50px;  */
     justify-content: center;
+    align-items: center;
     /* min-width: 800px; */
     min-height: 600px;
-    margin: 0 auto;
+    margin: 122px auto;
 
 }
 

@@ -1,43 +1,9 @@
-
-
-@font-face {
-    font-family: 'LeagueSpartan';
-    src: url('fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'LibreBakersville';
-    src: url('fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
-}
-
-:root {
-    --primary-color: #dbce26;
-    --other-color: #7f03e4;
-    /* var(--primary-color); */
-    --accent-color: #D4A4FF;
-    --secondary-color: #EDEDED;
-    --text-color: #ffffff;
-    --dark-text-color: #000000;
-    --light-text-color: #ffffff;
-    --background-color: rgba(39, 39, 39);
-    --background-color-transparent: rgba(39, 39, 39, 0.4);
-    --button-background: wheat;
-
-    /* FONT SIZES */
-    --base-font-size: 16px; 
-    --small-font-size: 1rem;
-    --medium-font-size: 1.5rem;
-    --large-font-size: 2rem;
-    --xlarge-font-size: 3.0rem;
-}
-
-
-
-
-.about-section {
-    padding: 50px 0;
-    background-color: var(--dark-text-color)
-}
+     
+    .about-section {
+        padding: 50px 0;
+        background-color: #1f1f1f;
+        margin-top: 94px;
+    }
 
 .about-content {
     display: grid;

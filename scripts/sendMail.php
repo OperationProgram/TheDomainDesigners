@@ -64,4 +64,5 @@ function sendMail($args) {
         echo "Oops! Something went wrong. Please try again later. Error: {$mail->ErrorInfo}";
     }
 }
+
 ?>
