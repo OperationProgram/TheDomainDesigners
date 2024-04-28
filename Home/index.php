@@ -115,7 +115,7 @@
             <div class="team-container">
                 <div class="team-content">
                     <div class="team-image">
-                        <img src="../assets/teamwork.jpg" alt="Team Image">
+                        <img src="../assets/teamwork.jpg" alt="Team Image" loading="lazy">
                     </div>
                     <div class="team-text">
                         <h2>Meet Our Team</h2>

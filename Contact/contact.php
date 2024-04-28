@@ -1,18 +1,43 @@
 <?php require("../scripts/sendMail.php"); ?>
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if(empty($_POST['email']) || empty($_POST['fname']) ||  empty($_POST['lname']) || empty($_POST['phone'])){
-         $response = "Email, Name, and Phone fields required";
-      } else{
-         $response = sendMail(['email' => $_POST['email'], 
-                              'fname' => $_POST['fname'],
-                              'lname' => $_POST['lname'],
-                              'phone' => $_POST['phone'],
-                              'company' => $_POST['company'],
-                              'website' => $_POST['website'],
-                              'message' =>  $_POST['message'],
+        $valid = false;
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $company = $_POST['company'];
+        $website = $_POST['website'];
+        $message = $_POST['message'];
+
+        if(empty($_POST['email']) || empty($_POST['fname']) ||  empty($_POST['lname']) || empty($_POST['phone'])){
+            $response = "Email, Name, and Phone fields required";
+        } 
+        
+        else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            // Sanitize email address
+            $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+            $valid = true;
+        } 
+        else {
+            $response = "Invalid email";
+        }
+        
+        if ($valid) {
+            $sanitizedFname = filter_var($fname, FILTER_SANITIZE_STRING);
+            $sanitizedLname = filter_var($lname, FILTER_SANITIZE_STRING);
+            $sanitizedCompany = filter_var($company, FILTER_SANITIZE_STRING);
+            $sanitizedWebsite = filter_var($website, FILTER_SANITIZE_STRING);
+            $sanitizedMessage = filter_var($message, FILTER_SANITIZE_STRING);
+            $response = sendMail(['email' => $sanitizedEmail, 
+                              'fname' => $sanitizedFname,
+                              'lname' => $sanitizedLname,
+                              'phone' => $phone,
+                              'company' => $sanitizedCompany,
+                              'website' => $sanitizedWebsite,
+                              'message' =>  $sanitizedMessage,
                             ]);
-      }
+        }
       echo '<script>window.location = "#submit_btn";</script>';
    }
 ?>

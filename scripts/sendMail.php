@@ -13,10 +13,11 @@ function sendMail($args) {
 
     // Compose email message
    
+    $body = "New Inquiry: \n\n";
     if (isset($fname)) {
-        $body = "First Name: $fname\n";
-    }
-    $body = "Last Name: \n$lname\n";
+        $body .= "First Name: \n$fname\n";
+    } 
+    $body .= "Last Name: \n$lname\n";
     $body .= "Email: \n$email\n";
     if (isset($phone)) {
         $body .= "Phone:\n$phone\n";
