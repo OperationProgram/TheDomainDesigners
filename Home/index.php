@@ -253,9 +253,7 @@
 
     </main>
 
-    <footer class="footer">
-        <script src="../scripts/footerLoader.js"></script>
-    </footer>
+
 
 </body>
 </html>

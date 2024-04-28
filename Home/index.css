@@ -5,10 +5,9 @@ Secondary Color: Light Gray #EDEDED */
 
 .video {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0; /* Shorthand for top, right, bottom, left: 0; */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     object-fit: cover;
     z-index: -1;
     background-color: #000;
