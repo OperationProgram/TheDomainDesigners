@@ -53,10 +53,10 @@
 
 
     <main class="main">
-        <video autoplay loop muted playsinline class="video">
+        <!-- <video autoplay loop muted playsinline class="video">
             <source src="../assets/newvid.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
+        </video> -->
         <section class="section section__hero" id="section-hero">
 
             <div class="hero-content">

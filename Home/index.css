@@ -3,15 +3,25 @@
 Accent Color: Lavender #D4A4FF
 Secondary Color: Light Gray #EDEDED */
 
-.video {
-    position: fixed;
-    inset: 0; /* Shorthand for top, right, bottom, left: 0; */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+body {
+    z-index: -10;
+    background: url("../assets/newvid.gif") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
     background-color: #000;
-}
+} */
 
 p {
     /* font-family: 'LibreBakersville', serif; */
